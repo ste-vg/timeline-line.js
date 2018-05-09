@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "docs": "http-server ./dist"
+    "build": "tsc && uglifyjs ./dist/index.js -o ./dist/index.min.js",
+    "docs": "http-server ./dist/"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
   "homepage": "https://github.com/ste-vg/timeline-line.js#readme",
   "devDependencies": {
     "http-server": "^0.11.1",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "uglify-js": "^3.3.24"
   },
-  "unpkg": "/dist/index.js"
+  "unpkg": "/dist/index.min.js"
 }
