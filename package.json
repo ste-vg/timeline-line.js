@@ -1,11 +1,11 @@
 {
   "name": "timeline-line",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Draws a lovely timeline line through your timeline in good time.",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc --outFile index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,5 @@
   "devDependencies": {
     "typescript": "^2.8.3"
   },
-  "unpkg": "/dist/index.js"
+  "unpkg": "index.js"
 }
