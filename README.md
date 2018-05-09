@@ -1,5 +1,5 @@
 # timeline-line.js
-Draw a lovely timeline line through your timeline in no time!
+A simple library to draw a smooth timeline line around html elements.
 
 ## Simple example
 https://codepen.io/steveg3003/pen/erVmdz/
