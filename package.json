@@ -1,6 +1,6 @@
 {
   "name": "timeline-line",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Draw a lovely timeline line through your timeline in no time!",
   "main": "dist/index.js",
   "scripts": {
