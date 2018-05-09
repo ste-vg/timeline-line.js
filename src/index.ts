@@ -1,12 +1,12 @@
 enum LineSide
 {
-	right,
-	left
+	right = 'right',
+	left = 'left'
 }
 
 interface TimelineElement
 {
-	element: HTMLElement;
+	element: any;
 	side: LineSide;
 	radius?: number[];
 }
@@ -23,12 +23,34 @@ class Timeline
 	private svg:HTMLElement;
 	private path:SVGPathElement;
 
+	static fromClass(className:string, startSide:LineSide = LineSide.left, radius:number = 20):TimelineElement[]
+	{
+		let elements = document.getElementsByClassName(className);
+		let options:TimelineElement[] = [];
+		let evenSide = startSide;
+		let oddSide = startSide == LineSide.left ? LineSide.right : LineSide.left;
+		for(let i = 0; i < elements.length; i++)
+		{
+			let option:TimelineElement = {
+				element: elements[i],
+				side: i % 2 == 0 ? evenSide : oddSide,
+				radius: [radius, radius]
+			}
+			options.push(option);
+			
+		}
+		return options;
+	}
+
 	constructor(svg:HTMLElement, options:TimelineElement[])
 	{
 		this.options = options;
         this.path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
         this.svg = svg;
-        this.svg.appendChild(this.path);
+		this.svg.appendChild(this.path);
+
+		window.onload = () => this.draw();
+        window.addEventListener('resize', () => this.draw())
 		
 		this.draw();
 	}

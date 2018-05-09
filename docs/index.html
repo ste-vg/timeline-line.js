@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timeline Line</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="timeline.js"></script>
+</head>
+<body>
+    <div id="container">
+        <svg id="svg"></svg>
+        <h1>Timeline Line</h1>  
+
+        <div id="para-0" class="block right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, architecto sapiente quae eaque fugit laborum consequuntur optio adipisci earum excepturi sed odit ipsum repellendus magni rem ex incidunt! Veritatis, maxime.</div>
+        <div id="para-1" class="block point">Accusamus voluptates vel, laborum dolores autem quae nisi. Accusamus quam natus, maxime, corrupti, doloribus minus minima ratione quos consequatur soluta ducimus autem aliquid esse at fugit perspiciatis dolor debitis magnam!</div>
+        <div id="para-2" class="block right point">Facere, error consectetur animi deserunt laudantium ab, placeat sit, qui voluptatum perferendis maiores omnis eveniet mollitia eius nam! Dicta quod doloribus dolore consequatur hic quos aperiam tempore iusto tenetur quam!</div>
+        <div id="para-3" class="block right">
+            <p>Eveniet debitis in, vel dolor dolorem cum dolorum consequuntur architecto! Odio ab repellat eligendi praesentium eveniet officiis voluptatum aperiam error iure pariatur, nemo magni! Placeat at esse deserunt beatae eos?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae error ducimus enim explicabo aut, nisi magni eos voluptatem quo tenetur quaerat, unde id velit aperiam inventore, impedit ab earum temporibus.</p>
+        </div>
+        <div id="para-4" class="block">Dolore placeat officia illo corporis aut eaque quam odit porro optio veniam quos unde eligendi, provident eveniet nulla laboriosam expedita nobis possimus sed, necessitatibus ullam debitis iusto. Ducimus, ullam sed?</div>
+    </div>
+    <script>
+
+        var path = new Timeline(document.getElementById('svg'), Timeline.fromClass('block', 'right'));
+        
+    </script>
+</body>
+</html>

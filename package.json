@@ -1,11 +1,12 @@
 {
   "name": "timeline-line",
-  "version": "0.1.4",
-  "description": "Draws a lovely timeline line through your timeline in good time.",
+  "version": "0.1.5",
+  "description": "Draw a lovely timeline line through your timeline in no time!",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "docs": "http-server ./dist"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/ste-vg/timeline-line.js#readme",
   "devDependencies": {
+    "http-server": "^0.11.1",
     "typescript": "^2.8.3"
   },
   "unpkg": "/dist/index.js"

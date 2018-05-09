@@ -1,9 +1,9 @@
 declare enum LineSide {
-    right = 0,
-    left = 1,
+    right = "right",
+    left = "left",
 }
 interface TimelineElement {
-    element: HTMLElement;
+    element: any;
     side: LineSide;
     radius?: number[];
 }
@@ -15,6 +15,7 @@ declare class Timeline {
     private options;
     private svg;
     private path;
+    static fromClass(className: string, startSide?: LineSide, radius?: number): TimelineElement[];
     constructor(svg: HTMLElement, options: TimelineElement[]);
     draw(): void;
 }
