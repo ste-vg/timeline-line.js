@@ -8,4 +8,4 @@ https://codepen.io/steveg3003/pen/erVmdz/
 https://codepen.io/steveg3003/pen/rvJVXP
 
 ## Note
-This is still beta so you could find bugs. It currently only works vertically.
+This is still beta. It currently only works vertically.
