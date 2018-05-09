@@ -135,7 +135,7 @@ code {
           transform: translatex(50%) translatey(-50%);
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (min-width : 480px) {
   .block{ 
     margin: 0 !important; 
     padding: 40px;
