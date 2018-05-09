@@ -1,12 +1,14 @@
 {
   "name": "timeline-line",
-  "version": "0.1.6",
+  "version": "0.2.3",
   "description": "Draw a lovely timeline line through your timeline in no time!",
-  "main": "dist/index.js",
+  "main": "lib-esm/index",
+  "types": "lib-esm/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && uglifyjs ./dist/index.js -o ./dist/index.min.js",
-    "docs": "http-server ./dist/"
+    "build": "npm run clean && tsc && uglifyjs ./lib/index.js -o ./lib/index.min.js  && tsc -m es6 --outDir lib-esm",
+    "docs": "http-server ./",
+    "clean": "shx rm -rf _bundles lib lib-esm"
   },
   "repository": {
     "type": "git",
@@ -19,9 +21,14 @@
   },
   "homepage": "https://github.com/ste-vg/timeline-line.js#readme",
   "devDependencies": {
+    "awesome-typescript-loader": "^5.0.0",
+    "browserify": "^16.2.2",
     "http-server": "^0.11.1",
+    "shx": "^0.2.2",
     "typescript": "^2.8.3",
-    "uglify-js": "^3.3.24"
+    "uglify-js": "^3.3.24",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3"
   },
-  "unpkg": "/dist/index.min.js"
+  "unpkg": "/lib/index.min.js"
 }

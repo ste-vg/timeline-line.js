@@ -49,7 +49,7 @@ class Timeline
         this.svg = svg;
 		this.svg.appendChild(this.path);
 
-		window.onload = () => this.draw();
+		window.addEventListener('load', () => this.draw())	  
         window.addEventListener('resize', () => this.draw())
 		
 		this.draw();
