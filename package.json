@@ -1,11 +1,11 @@
 {
   "name": "timeline-line",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Draws a lovely timeline line through your timeline in good time.",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --outFile ./dist/index.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
