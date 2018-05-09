@@ -1,13 +1,13 @@
-export enum WrapPathSide
+export enum LineSide
 {
 	right,
 	left
 }
 
-export interface WrapPathOption
+export interface TimelineElement
 {
 	element: HTMLElement;
-	side: WrapPathSide;
+	side: LineSide;
 	radius?: number[];
 }
 
@@ -17,13 +17,13 @@ export interface Pos
     y: number
 }
 
-export class WrapPath
+export class Timeline
 {
-	private options:WrapPathOption[];
+	private options:TimelineElement[];
 	private svg:HTMLElement;
 	private path:SVGPathElement;
 
-	constructor(svg:HTMLElement, options:WrapPathOption[])
+	constructor(svg:HTMLElement, options:TimelineElement[])
 	{
 		this.options = options;
         this.path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
@@ -35,7 +35,7 @@ export class WrapPath
 	
 	public draw()
 	{
-		let lastItem:WrapPathOption;
+		let lastItem:TimelineElement;
 		let lastPos:Pos;
 		
 		let path: any[] = ['M'];
@@ -55,13 +55,13 @@ export class WrapPath
 			
 			switch (item.side)
 			{
-				case WrapPathSide.left:
+				case LineSide.left:
 					pos1.x = bbox.x;	
 					pos1.y = bbox.y;
 					pos2.x = bbox.x;
 					pos2.y = bbox.y + bbox.height;
 					break;
-				case WrapPathSide.right:
+				case LineSide.right:
 					pos1.x = bbox.x + bbox.width;	
 					pos1.y = bbox.y;
 					pos2.x = bbox.x + bbox.width;

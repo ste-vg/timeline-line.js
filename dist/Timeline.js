@@ -1,19 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var WrapPathSide;
-(function (WrapPathSide) {
-    WrapPathSide[WrapPathSide["right"] = 0] = "right";
-    WrapPathSide[WrapPathSide["left"] = 1] = "left";
-})(WrapPathSide = exports.WrapPathSide || (exports.WrapPathSide = {}));
-var WrapPath = /** @class */ (function () {
-    function WrapPath(svg, options) {
+var LineSide;
+(function (LineSide) {
+    LineSide[LineSide["right"] = 0] = "right";
+    LineSide[LineSide["left"] = 1] = "left";
+})(LineSide = exports.LineSide || (exports.LineSide = {}));
+var Timeline = /** @class */ (function () {
+    function Timeline(svg, options) {
         this.options = options;
         this.path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
         this.svg = svg;
         this.svg.appendChild(this.path);
         this.draw();
     }
-    WrapPath.prototype.draw = function () {
+    Timeline.prototype.draw = function () {
         var lastItem;
         var lastPos;
         var path = ['M'];
@@ -28,13 +28,13 @@ var WrapPath = /** @class */ (function () {
             var pos1 = { x: 0, y: 0 };
             var pos2 = { x: 0, y: 0 };
             switch (item.side) {
-                case WrapPathSide.left:
+                case LineSide.left:
                     pos1.x = bbox.x;
                     pos1.y = bbox.y;
                     pos2.x = bbox.x;
                     pos2.y = bbox.y + bbox.height;
                     break;
-                case WrapPathSide.right:
+                case LineSide.right:
                     pos1.x = bbox.x + bbox.width;
                     pos1.y = bbox.y;
                     pos2.x = bbox.x + bbox.width;
@@ -75,6 +75,6 @@ var WrapPath = /** @class */ (function () {
         path.splice(path.length - 3, 1, 'L');
         this.path.setAttribute('d', path.join(' '));
     };
-    return WrapPath;
+    return Timeline;
 }());
-exports.WrapPath = WrapPath;
+exports.Timeline = Timeline;
