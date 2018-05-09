@@ -19,5 +19,6 @@
   "homepage": "https://github.com/ste-vg/timeline-line.js#readme",
   "devDependencies": {
     "typescript": "^2.8.3"
-  }
+  },
+  "unpkg": "/dist/index.js"
 }
