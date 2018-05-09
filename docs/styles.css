@@ -9,7 +9,6 @@ html, body {
 
 body {
   background: #eee;
-  background: linear-gradient(to left, #ddd, #eee);
 }
 
 #container {
@@ -35,12 +34,36 @@ body {
   stroke-dasharray: 6, 5;
 }
 
-h1 {
+h1, h2, h3 
+{
   color: lightseagreen;
   text-align: right;
   font-size: 3rem;
   margin: 0;
   padding: 0;
+}
+
+h2
+{
+    text-align: inherit;
+    font-size: 2rem;
+}
+
+h3
+{
+    font-size: 1.6rem;
+    text-align: inherit;
+}
+
+code {
+  font-family: monospace;
+  padding: 20px;
+  background-color: lightgray;
+  display: block;
+  color: #333;
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .block {
@@ -53,25 +76,55 @@ h1 {
 .block:nth-child(odd) {
   margin-left: 20%;
 }
+
+.block.full{
+  margin: 0;
+}
+
+
+
 .block.right {
   text-align: right;
 }
 .block.point:after {
-  content: '';
+  
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  top: 50%;
   background-color: lightseagreen;
+  color: white;
+  line-height: 60px;
+  font-size: 30px;
+  text-align: center;
+  border: 3px solid #eee;
 }
-.block#para-1:after, .block#para-4:after {
-  top: 0;
+
+.block.point.step-1:after {content: '1';}
+.block.point.step-2:after {content: '2';}
+.block.point.step-3:after {content: '3';}
+.block.point.step-4:after {content: '4';}
+.block.point.step-5:after {content: '5';}
+.block.point.step-end:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 100%;
+}
+
+.block.step-end
+{
+  padding: 200px 50px 10px 50px;
+}
+
+.left:after {
+  
   left: 0;
   -webkit-transform: translatex(-50%) translatey(-50%);
           transform: translatex(-50%) translatey(-50%);
 }
-.block#para-2:after {
-  top: 0;
+.right:after {
   right: 0;
   -webkit-transform: translatex(50%) translatey(-50%);
           transform: translatex(50%) translatey(-50%);

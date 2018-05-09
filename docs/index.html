@@ -7,25 +7,42 @@
     <title>Timeline Line</title>
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="timeline.js"></script>
+    <script src="/dist/index.min.js"></script>
 </head>
 <body>
     <div id="container">
         <svg id="svg"></svg>
         <h1>Timeline Line</h1>  
 
-        <div id="para-0" class="block right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, architecto sapiente quae eaque fugit laborum consequuntur optio adipisci earum excepturi sed odit ipsum repellendus magni rem ex incidunt! Veritatis, maxime.</div>
-        <div id="para-1" class="block point">Accusamus voluptates vel, laborum dolores autem quae nisi. Accusamus quam natus, maxime, corrupti, doloribus minus minima ratione quos consequatur soluta ducimus autem aliquid esse at fugit perspiciatis dolor debitis magnam!</div>
-        <div id="para-2" class="block right point">Facere, error consectetur animi deserunt laudantium ab, placeat sit, qui voluptatum perferendis maiores omnis eveniet mollitia eius nam! Dicta quod doloribus dolore consequatur hic quos aperiam tempore iusto tenetur quam!</div>
-        <div id="para-3" class="block right">
-            <p>Eveniet debitis in, vel dolor dolorem cum dolorum consequuntur architecto! Odio ab repellat eligendi praesentium eveniet officiis voluptatum aperiam error iure pariatur, nemo magni! Placeat at esse deserunt beatae eos?</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae error ducimus enim explicabo aut, nisi magni eos voluptatem quo tenetur quaerat, unde id velit aperiam inventore, impedit ab earum temporibus.</p>
+        <div class="block right">A tiny library to draw a line around DOM elements.</div>
+        <div class="block left full point step-1">
+            <h3>Add Timeline-line</h3>
+            <p>Add the timeline script to your html</p>
+            <code>&lt;script src="https://unpkg.com/timeline-line"&gt;&lt;/script&gt;</code>
+            <p>You should also be able to grab from NPM</p>
+            <code>npm i timeline-line</code>
         </div>
-        <div id="para-4" class="block">Dolore placeat officia illo corporis aut eaque quam odit porro optio veniam quos unde eligendi, provident eveniet nulla laboriosam expedita nobis possimus sed, necessitatibus ullam debitis iusto. Ducimus, ullam sed?</div>
+        <div class="block right full point step-2">
+            <h3>Quick setup</h3>
+            <p>To get going quickly you can just use the 'fromClass' function to setup.</p>
+            <code>new Timeline(document.getElementById('svg'), Timeline.fromClass('block', 'right'));</code>
+        </div>
+        <div class="block left point step-3">
+            <h3>Styling</h3>
+            <p>Timeline-line does no apply any styles to the svg path so don't forget to add those to your css. See examples of HTML and CSS setup in the examples below.</p>
+        </div>
+        <div class="block point right step-4">
+            <h3>Examples</h3>
+            <p><a href="https://codepen.io/steveg3003/pen/erVmdz/" target="_blank">Simple setup</a></p>
+            <p><a href="https://codepen.io/steveg3003/pen/rvJVXP" target="_blank">Custom setup</a></p>
+        </div>
+        <div class="block point left step-end">
+            <h2>Fin</h2>
+        </div>
     </div>
     <script>
 
-        var path = new Timeline(document.getElementById('svg'), Timeline.fromClass('block', 'right'));
+        var path = new Timeline(document.getElementById('svg'), Timeline.fromClass('block', 'right', 80));
         
     </script>
 </body>

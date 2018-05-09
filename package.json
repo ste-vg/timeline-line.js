@@ -1,12 +1,13 @@
 {
   "name": "timeline-line",
-  "version": "0.1.6",
+  "version": "0.3.0",
   "description": "Draw a lovely timeline line through your timeline in no time!",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && uglifyjs ./dist/index.js -o ./dist/index.min.js",
-    "docs": "http-server ./dist/"
+    "docs": "http-server ./"
   },
   "repository": {
     "type": "git",
