@@ -135,15 +135,17 @@ code {
           transform: translatex(50%) translatey(-50%);
 }
 
-@media only screen and (max-width : 480px) {
-  .block{ 
+@media only screen and (max-width : 480px) 
+{
+  .block
+  {
     margin: 0 !important; 
-    padding: 40px;
+    padding: 40px !important;
   }
 
   .block.point:after {
     width: 40px;
-  height: 40px;
-  line-height: 40px;
+    height: 40px;
+    line-height: 40px;
   }
 }
