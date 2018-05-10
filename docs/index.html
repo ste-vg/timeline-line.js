@@ -46,9 +46,16 @@
             <h2>Fin</h2>
         </div>
     </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112472333-1"></script>
     <script>
 
         var path = new Timeline(document.getElementById('svg'), Timeline.fromClass('block', 'right', 80));
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112472333-1');
         
     </script>
 </body>
